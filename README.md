@@ -1,5 +1,5 @@
 # Pin support
-This fork exists to add rudementary pin support to kaiauth. To do this, one must exit the js/pin.js file and set the pin variable to a sha256 hash of any number. Then install the app via omniSD (or simmilar). 
+This fork exists to add rudimentary pin support to kaiauth. To do this, one must edit the js/pin.js file and set the pin variable to a sha256 hash of any number. Then install the app via omniSD (or similar).
 
 # KaiAuth
 
