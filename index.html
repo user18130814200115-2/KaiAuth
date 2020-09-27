@@ -8,27 +8,16 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="prefetch" type="application/l10n" href="data/locales.ini" />
+    <script type="text/javascript" src="js/pin.js"></script>
   </head>
 
   <body>
     <section id="title">
       <h1>KaiAuth</h1>
     </section>
-    <section id="authcodes">
+    <section id="authcodes" class="center">
+    	<h1>Enter Pin</h1>
+    	<input type="number" id="pin" autofocus></input>
     </section>
-    <footer id="softkey-bar">
-        <p id="softkey-left" data-l10n-id="add">Add</p>
-        <p id="softkey-center">
-          <span id="next-text" data-l10n-id="next"></span>
-          <span id="time-remaining"></span>
-        </p>
-        <p id="softkey-right" data-l10n-id="menu">Options</p>
-    </footer>
-    <script type="text/javascript" src="js/libs/parseURI.js"></script>
-    <script type="text/javascript" src="js/libs/scrollIntoView.js"></script>
-    <script type="text/javascript" src="js/libs/otplib-browser/buffer.js"></script>
-    <script type="text/javascript" src="js/libs/otplib-browser/index.js"></script>
-    <script type="text/javascript" src="js/libs/l10n.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
