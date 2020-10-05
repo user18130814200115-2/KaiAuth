@@ -1,5 +1,5 @@
 # Pin support
-This fork exists to add rudimentary pin support to kaiauth. To do this, one must edit the js/pin.js file and set the pin variable to a sha256 hash of any number. Then install the app via omniSD (or similar).
+This fork exists to add rudimentary pin support to kaiauth. To do this, one must edit the js/pin.js file and set the pin variable to a sha256 hash of any number. More detailed instructions are avaiable under Install.
 
 # KaiAuth
 
@@ -15,21 +15,21 @@ KaiAuth is a simple Google Authenticator alternative on KaiOS.
 ![option_menu](https://kaiauth.zjyl1994.com/img/option_menu.png)
 
 # Install
+- Download [this git respository](https://github.com/user18130814200115-2/KaiAuth.git)
+- open the js/pin.js file
+- look for the line that says `if (sha256(document.getElementById('pin').value) == "ENTER PIN HERE") {` and replace `ENTER PIN HERE` with a [hash](https://passwordsgenerator.net/sha256-hash-generator/) of your desired four digit pin
+  + You can also have a more than four digits. To allow this, look for the line saying `else if (document.getElementById('pin').value.length > 3) {` and change 3 to your pin length-1 (EG. 14 for a fifteen digit pin)
 
 ## Omni SD
-- Download [kaiauth-omnisd](https://github.com/zjyl1994/KaiAuth/releases/download/v1.1.1/kaiauth-v1.1.1-omnisd.zip).
-- Copy this zip file to the apps directory of the memory card.
-- Open "OmniSD" and install this zip.
+- Now compress all the files excluding LICENCE, README.MD and metadata.json into a zip called application.zip.
+- Compress aplication.zip and metadata.json into yet another zip called KaiAuth.zip
 
 ## Web IDE
-- Download [kaiauth-webide](https://github.com/zjyl1994/KaiAuth/releases/download/v1.1.1/kaiauth-v1.1.1-webide.zip).
-- Extract this zip to a folder.
-- Click "Open Packaged App" and select the folder from the previous step.
+- Open WebIDE
+- Click "Open Packaged App" and select the folder with your edited version of KaiAuth.
 - Click "Install and Run" button.
 
 # More information
 For more information please visit https://kaiauth.zjyl1994.com/ .
-
-I have submitted it to KaiStore, but need to wait for KaiStore review. It may be available for download in KaiStore in the near future.
 
 (Available in 🇺🇸 American English, 🇨🇳 Simplified Chinese, 🇹🇼 Traditional Chinese and 🇭🇰 Cantonese.)
