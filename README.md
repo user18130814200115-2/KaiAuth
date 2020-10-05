@@ -17,14 +17,15 @@ KaiAuth is a simple Google Authenticator alternative on KaiOS.
 ![failed pin](https://github.com/user18130814200115-2/KaiAuth/blob/master/Screenshots/Screenshot_failedPin.png?raw=true)
 
 # Install
-- Download [this git respository](https://github.com/user18130814200115-2/KaiAuth.git)
+- Download the latest release and cxtract first kaiauth.zip and then application.zip
 - open the js/pin.js file
 - look for the line that says `if (sha256(document.getElementById('pin').value) == "ENTER PIN HERE") {` and replace `ENTER PIN HERE` with a [hash](https://passwordsgenerator.net/sha256-hash-generator/) of your desired four digit pin
   + You can also have a more than four digits. To allow this, look for the line saying `else if (document.getElementById('pin').value.length > 3) {` and change 3 to your pin length-1 (EG. 14 for a fifteen digit pin)
 
 ## Omni SD
-- Now compress all the files excluding LICENCE, README.MD and metadata.json into a zip called application.zip.
+- Compress all the files inside the application folder (NOT THE APPLICATION FOLDER ITSELF) zip called application.zip.
 - Compress aplication.zip and metadata.json into yet another zip called KaiAuth.zip
+- Place this file in Internal Storage/downloads and install with omni sd
 
 ## Web IDE
 - Open WebIDE
