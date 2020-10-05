@@ -14,6 +14,9 @@ KaiAuth is a simple Google Authenticator alternative on KaiOS.
 ![scan_qrcode](https://kaiauth.zjyl1994.com/img/scan_qrcode.png)
 ![option_menu](https://kaiauth.zjyl1994.com/img/option_menu.png)
 
+![pin input](https://github.com/user18130814200115-2/KaiAuth/blob/master/Screenshots/Screenshot_inputPin.png?raw=true)
+![failed pin](https://github.com/user18130814200115-2/KaiAuth/blob/master/Screenshots/Screenshot_failedPin.png?raw=true)
+
 # Install
 - Download [this git respository](https://github.com/user18130814200115-2/KaiAuth.git)
 - open the js/pin.js file
