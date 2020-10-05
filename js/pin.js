@@ -1,21 +1,38 @@
-document.onkeypress = function(e) { 
-    setTimeout(CheckPin, 100)
+window.onload = function () {
+	Focus();
+}
+
+function Focus() {
+  var input = document.getElementById('pin');
+  input.focus();
+  input.select();
+}
+
+var timeout = 1000;
+
+document.onkeypress = function(e) {
+    setTimeout(CheckPin, 100);
+    
+    if (e.keyCode == 13) {
+	  if (confirm("Close Window?")) {
+		close();
+	  }
+    }
 };
 
-pin=[insert hash here]
-
 function CheckPin() {
-	if (sha256(document.getElementById('pin').value) == pin) {
-		window.location.href = "auth.html";
+	if (sha256(document.getElementById('pin').value) == "f36e412aea00d7c622f3d331c5ceec42eaf18bda2d0374971a09fc79d7d9f293") {
+		timeout = 1000;
+		window.location.replace("auth.html");
+	}
+	else if (document.getElementById('pin').value.length > 3) {
+		document.getElementById('pin').value = "";
+		document.getElementById("pin").disabled = true;
+		timeout = timeout*2; alert("wrong pin, input timed out for "+timeout+" miliseconds");
+		setTimeout(function(){  document.getElementById("pin").disabled = false; Focus();}, timeout);
+		
 	}
 }
-
-window.onload = function() {
-    var e = document.getElementById("pin");
-    e.focus(), e.select()
-}
-
-
 
 var sha256 = function sha256(ascii) {
     function rightRotate(value, amount) {
