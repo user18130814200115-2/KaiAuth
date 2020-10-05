@@ -21,7 +21,7 @@ document.onkeypress = function(e) {
 };
 
 function CheckPin() {
-	if (sha256(document.getElementById('pin').value) == "f36e412aea00d7c622f3d331c5ceec42eaf18bda2d0374971a09fc79d7d9f293") {
+	if (sha256(document.getElementById('pin').value) == "ENTER PIN HERE") {
 		timeout = 1000;
 		window.location.replace("auth.html");
 	}
